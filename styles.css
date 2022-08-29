@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* !header starts from here! */
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 2rem; */
+    background: #ccc;
+    margin-bottom: 4rem;
+}
+.list-container .list{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4rem;
+    list-style-type: none;
+    text-decoration: none;
+    margin-right: 3rem;
+}
+.list .main-item{
+    text-decoration: none;
+    text-transform: capitalize;
+     color: #7110e8; 
+    font-size: 1.3rem;
+}
+
+/* logo */
+.Qlog{
+    font-size: 4rem;
+    font-weight: bolder;
+    font-style: italic;
+    color: #000F2C;
+}
+
+/* drop-downs */
+ .dropdown-content{
+    position: absolute;
+     display:none; 
+      margin-bottom: 8rem;
+ }
+ .dropdown-content .item{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 0.6rem;
+    font-weight: bolder;
+    line-height: 1rem;
+    background-color: #e0b61a;
+    max-width: 100%;
+    width: 5rem;
+     margin-top: 0.4rem;
+    text-align: center;
+    border-radius: 2px;
+    
+} 
+.item:hover{
+    color: #b30a0a;
+    background: none;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+ .drop-down:hover .dropdown-content{
+    display: block;
+    margin-bottom: 9rem;
+} 
+
+ 
+/* !header ends here */
+img{
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    border-radius: 1rem 1rem 0 0;
+}
+.main-container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: 10px;
+}
+/* %%%%%%%%%%%%%%%%%$$$$$$$$$$$$ */
+.latest-news h2{
+    text-align: center;
+    text-transform: capitalize;
+    color:#e661ac;
+    margin-left: -2rem;
+    margin-top: 1rem
+}
+
+.latest-news{
+    height: 20rem;
+    max-width: 100%;
+    margin-top: 1rem;
+}
+
+.latest-news p{
+    margin-left: 0;
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.latest-item{
+     width: 15rem; 
+    display: grid;
+}
+.item-dsc{
+    padding: 1rem 0;
+}
+.latest-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background: #f5f4f4;
+}
+
+.item-dsc{
+    background: #fff;
+    border-radius: 0 0 0.5rem 0.5rem;
+    
+}
+.item-abt{
+     font-size: 0.8rem; 
+    color: #000F2C;
+    margin-left: 0.5rem;
+    line-height: 1rem;
+    font-family: sans-serif;
+}
+.item-title{
+    font-size: 0.6rem;
+    color: #ccc;
+    font-weight: bolder;
+    margin: 0px 0px 5px 5px;
+}
+.item-date{
+    text-align: center;
+    padding-top: 1rem;
+}
+.current-news{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+/* !More-container starts from here */
+.more-news-container{
+    margin-top: 2rem;
+}
+.more{
+    /* border: 2px solid green; */
+    display: flex;
+    gap: 2rem;
+    /* grid-template-columns: 1fr 1fr;  */
+    padding: 1rem 1rem;
+    border-top: 2px solid gray;
+     
+}
+.more-title{
+    margin-left: 2rem;
+    color: #e0b61a;
+}
+.more-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    box-shadow: 20px 20px 50px 15px #fff inset;
+    /* border: 2px solid red; */
+    
+}
+.more-item img{
+    width: 5rem;
+    border-radius: 0%;
+    
+}
+.more-item h2{
+    font-size: 0.7rem;
+    color: #ccc;
+    font-weight: bolder;
+}
+
+/*  media query for small screen */
+
+@media (max-width: 900px) {
+    .more{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+         justify-content: center;
+    }
+    .latest-news p{
+        visibility: hidden;
+    }
+    .latest-container{
+        margin-top: -18rem;
+    }
+    .header-container{
+        margin: 1rem 0 2rem;
+          padding: 2rem 0;
+         justify-content: space-between;
+         margin-bottom: 1rem;
+         margin-top: 0;
+    }
+    .list-container .list{
+        gap: 1.5rem;
+    }
+    .list-container{
+        margin-right: 1rem;
+    }
+    .Qlog{
+        font-size: 1.5rem;
+    }
+    
+}
+
+/* !!!!classes to be used in JS !!!*/
+.fixed-title{
+    position: sticky;
+    top: 0;
+    left: 0;
+    color: #ec18ac;
+}
+ 
