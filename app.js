@@ -42,15 +42,15 @@ const moreArticles = [
     dsc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum",
     title: "Football Development",
 },
-{img: "images/img-6.jpg",
+{img: "images/image-3.jpg",
     dsc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum",
     title: "Football Development",
 },
-{img: "images/img-6.jpg",
+{img: "images/image-3.jpg",
     dsc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum",
     title: "Football Development",
 },
-{img: "images/img-6.jpg",
+{img: "images/img-1.jpg",
     dsc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum",
     title: "Football Development",
 },
@@ -63,7 +63,8 @@ console.log(moreArticles)
 
 // window eventlistener for calling article functions
 window.addEventListener("DOMContentLoaded", ()=>{
-    generateMainArticle(articles)
+    generateMainArticle(articles);
+    generateMoreArticle(moreArticles)
 });
 
 
@@ -90,31 +91,26 @@ let generateMainArticle = (items)=>{
     currentNewsContainer.innerHTML = itemsDisplay;
 }
 
-// ! A function for generating more articles!!!!
+// ! A function for generating more articles (carousel)!!!!
 const moreNewsContainer = document.querySelector(".more-news-container");
 console.log(moreNewsContainer)
 
 let generateMoreArticle = (items) => {
     let moreArticleDisplay = items.map((article)=>{
+        let {img, dsc, title} = article
         return article.innerHTML=`
             <div class="more">
             <div class="more-item">
-                <img src="images/img-1.jpg" alt="image">
+                <img src="${img}" alt="image">
                 <div class="more-desc">
-                    <h2>Football Development</h2>
-                    <p class="more-about">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum 
-                    </p>
+                    <h2>${title}</h2>
+                    <p class="more-about">${dsc}</p>
                 </div>
             </div>
             </div>`
     }).join("")
     moreNewsContainer.innerHTML = moreArticleDisplay;
 }
-generateMoreArticle(moreArticles)
-
- 
- 
  
 // ! fixed-nav when the page is scrolled
 const latestNewsTitle = document.querySelector(".latest-news");
