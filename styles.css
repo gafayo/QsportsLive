@@ -21,6 +21,7 @@
     text-decoration: none;
     margin-right: 3rem;
 }
+
 .list .main-item{
     text-decoration: none;
     text-transform: capitalize;
@@ -108,10 +109,11 @@
 .icon{
     width: 3rem;
     height: 3rem;
-    background: transparent;
+    /* background: red; */
     margin: 0 2rem;
     border-radius: 50%;
     padding-top: 0.5rem;
+    
 }
 @keyframes scroll {
     0%{
@@ -274,9 +276,9 @@ img{
         /* border: 1px solid green; */
     }
     .icon{
-        width: 2rem;
+        width: 2rem;    
         height: 2rem;
-        background: transparent;
+        /* background: red; */
         margin: 0 1rem;
         border-radius: 50%;
     }
@@ -297,17 +299,22 @@ img{
         margin-top: -18rem;
     }
     .header-container{
-        margin: 1rem 0 2rem;
+        /* margin: 1rem 0 2rem; */
           padding: 2rem 0;
+          display: flex;
          justify-content: space-between;
          margin-bottom: 1rem;
          margin-top: 0;
     }
     .list-container .list{
-        gap: 1.5rem;
+        gap: 1rem;
+        /* border: 1px solid blue; */
     }
     .list-container{
-        margin-right: 1rem;
+        margin-left: 0.5rem;
+        max-width: 65%;
+        /* border: 1px solid red;  */
+         /* display: none; */
     }
     .Qlog{
         font-size: 1.5rem;
@@ -322,8 +329,13 @@ img{
     left: 0;
     color: #ec18ac;
 }
+
+
+
+/* @@@@@@@@@@@@@@@@@@ */
 i{
     font-size: 2rem;
+    /* color: transparent; */
 }
  .fa-futbol{
     font-size: 2rem;
